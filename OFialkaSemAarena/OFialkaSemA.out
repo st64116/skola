@@ -1,0 +1,69 @@
+
+                                      ARENA Simulation Results
+                             st64116@student.upce.cz - License: STUDENT
+
+                                  Summary for Replication 1 of 100000
+
+Project: Unnamed Project                                             Run execution date :10/10/2022
+Analyst: st64116@student.upce.cz                                     Model revision date:10/10/2022
+
+Replication ended at time      : 0.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                             .00000     (Insuf)    .00000     .00000          1    
+Entity 1.NVATime                            .00000     (Insuf)    .00000     .00000          1    
+Entity 1.WaitTime                           .00000     (Insuf)    .00000     .00000          1    
+Entity 1.TranTime                           .00000     (Insuf)    .00000     .00000          1    
+Entity 1.OtherTime                          .00000     (Insuf)    .00000     .00000          1    
+Entity 1.TotalTime                          .00000     (Insuf)    .00000     .00000          1    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                .00000     (Insuf)    .00000     1.0000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           1.0000    
+Entity 1.NumberOut                          1.0000    
+System.NumberOut                            1.0000    
+
+Beginning replication 2 of 100000
+
+----------------------------------------------------------------------
+19019:DISC
+Entity: 2
+A runtime error was detected at time 0.0 at the following block:
+
+ *    4 2$              ASSIGN:
+                            cesta 1=cesta 1+DISCRETE(0.1,5,0.2,8,0.7,10):
+                            NEXT(3$);
+
+Invalid parameters for probability distribution.
+
+Possible causes:
+ Uniform, Triangular: Parameters out of order.
+ Normal: StdDev not positive real.
+ Poisson: Mean not positive real.
+ Weibull: Beta not positive real; Alpha not positive real.
+ LogNormal: LogMean not positive real; LogStdDev not positive real.
+ Gamma: Beta not positive real; Alpha not positive real.
+ Exponential: Mean not positive real.
+ k-Erlang: ExpMean not positive real; k not positive integer.
+ Beta: Alpha1 not positive real; Alpha2 not positive real.
+ Johnson: Lamda not positive real.
+ Discrete, Continuous: Non-cumulative probabilities or missing value.
+
+----------------------------------------------------------------------
+
+
