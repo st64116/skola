@@ -67,3 +67,45 @@ Possible causes:
 ----------------------------------------------------------------------
 
 
+SIMAN Run Controller.
+
+0.0 Hours>
+                                      ARENA Simulation Results
+                             st64116@student.upce.cz - License: STUDENT
+
+                                  Summary for Replication 2 of 100000
+
+Project: Unnamed Project                                             Run execution date :10/10/2022
+Analyst: st64116@student.upce.cz                                     Model revision date:10/10/2022
+
+Replication ended at time      : 0.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                                 --         --         --         --          0
+Entity 1.NVATime                                --         --         --         --          0
+Entity 1.WaitTime                               --         --         --         --          0
+Entity 1.TranTime                               --         --         --         --          0
+Entity 1.OtherTime                              --         --         --         --          0
+Entity 1.TotalTime                              --         --         --         --          0
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                .00000     (Insuf)    .00000     1.0000     1.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           1.0000    
+Entity 1.NumberOut                          .00000    
+System.NumberOut                            .00000    
+
