@@ -35,7 +35,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark pt-4 mb-5">
     <div class="container-md">
-        <a class="navbar-brand text-uppercase" href="#">Crypto-app</a>
+        <a class="navbar-brand text-uppercase fw-normal" href="#">Crypto-app</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,13 +43,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto text-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link active fw-normal" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="coins.php?page=0">coins</a>
+                    <a class="nav-link active fw-normal" aria-current="page" href="coins.php?page=0">coins</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">log in</a>
+                    <a class="nav-link active fw-normal" aria-current="page" href="#">log in</a>
                 </li>
             </ul>
         </div>
@@ -164,7 +164,7 @@ for ($i = 0; $i <= 15; $i++) {
     }
 }
 
-echo '<script>var historyPrices = ' . json_encode($prices) . '; console.log(historyPrices);</script>';
+echo '<script>var historyPrices = ' . json_encode(array_reverse($prices)) . '; console.log(historyPrices);</script>';
 
 $dates = array();
 for ($i = 0; $i <= 15; $i++) {
@@ -180,7 +180,7 @@ for ($i = 0; $i <= 15; $i++) {
     }
 }
 
-echo '<script>var historyDates = ' . json_encode($dates) . '; console.log(historyDates); let label = ' . json_encode($coin->name) . ';</script>';
+echo '<script>var historyDates = ' . json_encode(array_reverse($dates)) . '; console.log(historyDates); let label = ' . json_encode($coin->name) . ';</script>';
 
 ?>
 
