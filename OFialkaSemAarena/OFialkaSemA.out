@@ -2,7 +2,7 @@
                                       ARENA Simulation Results
                              st64116@student.upce.cz - License: STUDENT
 
-                                  Summary for Replication 1 of 100000
+                                  Summary for Replication 1 of 100
 
 Project: Unnamed Project                                             Run execution date :10/10/2022
 Analyst: st64116@student.upce.cz                                     Model revision date:10/10/2022
@@ -38,7 +38,7 @@ Entity 1.NumberIn                           1.0000
 Entity 1.NumberOut                          1.0000    
 System.NumberOut                            1.0000    
 
-Beginning replication 2 of 100000
+Beginning replication 2 of 100
 
 ----------------------------------------------------------------------
 19019:DISC
@@ -73,7 +73,7 @@ SIMAN Run Controller.
                                       ARENA Simulation Results
                              st64116@student.upce.cz - License: STUDENT
 
-                                  Summary for Replication 2 of 100000
+                                  Summary for Replication 2 of 100
 
 Project: Unnamed Project                                             Run execution date :10/10/2022
 Analyst: st64116@student.upce.cz                                     Model revision date:10/10/2022
