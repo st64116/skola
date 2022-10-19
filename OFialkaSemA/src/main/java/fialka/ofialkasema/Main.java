@@ -35,8 +35,7 @@ public class Main {
             cenySimulaci.add(nejlevnejsiCesta);
             prumernaCena = vsechnyCeny / pocetSimulaci;
             smerOdchylka2 = spocitejOdchylku(cenySimulaci, prumernaCena);
-            System.out.println(smerOdchylka2);
-        } while (Math.abs(smerOdchylka1 - smerOdchylka2) > 0.00000001);
+        } while (Math.abs(smerOdchylka1 - smerOdchylka2) > 0.000001);
 //        }while(pocetSimulaci < 100000);
 
         zapisCeny(cenySimulaci);
