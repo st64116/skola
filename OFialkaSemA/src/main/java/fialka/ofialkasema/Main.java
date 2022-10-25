@@ -19,29 +19,27 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         int pocetSimulaci = 0;
-        double vsechnyCeny = 0, prumernaCena = 0;
+        double vsechnyCeny = 0.0, prumernaCena = 0.0;
 
         double smerOdchylka1, smerOdchylka2 = 1000;
-
+        
         LinkedList<Long> cenySimulaci = new LinkedList();
 
         do {
-            pocetSimulaci++;
-            smerOdchylka1 = smerOdchylka2;
             Simulace sim = new Simulace();
             sim.spocitejCennyCest();
             long nejlevnejsiCesta = Math.round(sim.getNejlevnejsiCestu());
             vsechnyCeny += nejlevnejsiCesta;
             cenySimulaci.add(nejlevnejsiCesta);
+            pocetSimulaci++;
             prumernaCena = vsechnyCeny / pocetSimulaci;
+            smerOdchylka1 = smerOdchylka2;
             smerOdchylka2 = spocitejOdchylku(cenySimulaci, prumernaCena);
-        } while (Math.abs(smerOdchylka1 - smerOdchylka2) > 0.000001);
-//        }while(pocetSimulaci < 100000);
-
+            System.out.println("prvni: " + smerOdchylka1 + " druha: " + smerOdchylka2 + "rozdil: " +  Math.abs(smerOdchylka1 - smerOdchylka2));
+        } while (Math.abs(smerOdchylka1 - smerOdchylka2) > 0.0000001);
         zapisCeny(cenySimulaci);
         System.out.println(pocetSimulaci);
         System.out.println("prumerna cena projektu: " + Math.round(prumernaCena) * 1000 + " Kč,-");
-
     }
 
     private static void zapisCeny(LinkedList<Long> list) throws IOException {
@@ -55,7 +53,7 @@ public class Main {
                 fw.write(i + ";" + String.valueOf(procenta).replace(".", ",") + "\n");
             }
         }
-
+        
         fw.close();
     }
 
@@ -78,10 +76,9 @@ public class Main {
     private static double spocitejOdchylku(LinkedList<Long> list, double prumer) {
         double pom = 0;
         for (long cena : list) {
-            pom += (cena - prumer) * (cena - prumer);
+            pom += Math.pow(cena - prumer, 2);
         }
-        double p = 1.0 / list.size();
-        double rozptyl = (p * pom);
+        double rozptyl = (pom/list.size());
         return Math.sqrt(rozptyl);
     }
 }

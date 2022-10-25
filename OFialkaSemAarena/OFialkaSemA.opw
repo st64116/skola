@@ -1,7 +1,8 @@
 [RESOURCES]
 [VARIABLES]
+Start projektu.NumberOut
 cesta 1
 cesta 3
 cesta 2
-Create 1.NumberOut
-Dispose 1.NumberOut
+Nejlevnejsi cesta
+Konec projektu.NumberOut
